@@ -31,17 +31,17 @@ namespace Total_Amount_Calculator
         public MainWindow()
         {
             InitializeComponent();
+            txtPattern.Text = @"(\= \d+\.\d+)|(\= \d+)"; // Default Data format assumed e.g 'Price = 45.5' OR 'Price = 45'
         }
 
         private void btnChoose_Click(object sender, RoutedEventArgs e)
         {
-            txtPattern.Text = @"(\= \d+\.\d+)|(\= \d+)";
 
             //#region Test Regex
 
             //Regex regex = new Regex(txtPattern.Text);
 
-            //Match match = regex.Match("Doggy ( 75 / 3 ) = 55.5 , Perl");
+            //Match match = regex.Match("Test ( 75 / 3 ) = 55.5 , Perl");
             //if (match.Success)
             //{
 

@@ -7,10 +7,14 @@
         mc:Ignorable="d"
         Title="Total Amount Calculator" Height="350" Width="525" MaxWidth="525" MaxHeight="350">
     <Grid>
-        <Button x:Name="btnChoose" Content="Choose Excel File" HorizontalAlignment="Left" Margin="54,83,0,0" VerticalAlignment="Top" Width="117" Height="34" Click="btnChoose_Click"/>
-        <TextBox x:Name="txtPattern" HorizontalAlignment="Left" Height="23" Margin="206,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
-        <Label x:Name="label" Content="Enter Pattern to Match" HorizontalAlignment="Left" Margin="206,63,0,0" VerticalAlignment="Top" Width="167"/>
-        <ProgressBar x:Name="barPercent" HorizontalAlignment="Left" Height="34" Margin="54,145,0,0" VerticalAlignment="Top" Width="423"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnChoose" Content="Choose Excel File" HorizontalAlignment="Left" Margin="54,83,0,0" VerticalAlignment="Top" Width="117" Height="34" Click="btnChoose_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtPattern" HorizontalAlignment="Left" Height="23" Margin="206,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Grid.ColumnSpan="2"/>
+        <Label x:Name="label" Content="Enter Format of Data" HorizontalAlignment="Left" TextBlock.TextAlignment="Center" Margin="206,63,0,0" VerticalAlignment="Top" Width="167" Grid.ColumnSpan="2"/>
+        <ProgressBar x:Name="barPercent" HorizontalAlignment="Left" Height="34" Margin="54,145,0,0" VerticalAlignment="Top" Width="423" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
